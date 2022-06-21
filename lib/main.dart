@@ -1,4 +1,7 @@
+import 'package:covid_worldwide/provider/user_provider.dart';
+import 'package:covid_worldwide/views/pages/covid_worldwide_page.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +27,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: ChangeNotifierProvider(
+        create: (_) => UserProvider(),
+        child: const CovidWorldwidePage()),
     );
   }
 }
