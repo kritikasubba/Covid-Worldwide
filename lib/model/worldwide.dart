@@ -2,7 +2,7 @@ class Worldwide {
   num? updated;
   final num cases;
 
-  final num death;
+  final num deaths;
   final num recovered;
   final num todayRecovered;
   final num active;
@@ -18,7 +18,7 @@ class Worldwide {
     required this.affectedCountries,
     required this.cases,
     required this.critical,
-    required this.death,
+    required this.deaths,
     required this.deathsPerOneMillion,
     required this.oneDeathPerPeople,
     required this.updated,
@@ -32,7 +32,7 @@ class Worldwide {
    affectedCountries: json['affectedCountries'],
     cases: json['cases'],
      critical: json['critical'],
-      death: json['death'],
+      deaths: json['deaths'],
        deathsPerOneMillion: json['deathsPerOneMillion'], 
        
        oneDeathPerPeople: json['oneDeathPerPeople'],

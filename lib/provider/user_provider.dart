@@ -14,7 +14,7 @@ set getDetails(Worldwide? cases) {
 }
 
 getData() async {
-  _world = await fetchData();
+ casesData = await fetchData();
   notifyListeners();
 }
 

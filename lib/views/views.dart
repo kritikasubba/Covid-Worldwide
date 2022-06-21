@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 
 Worldwide? casesData;
 
-Future<Worldwide> fetchData() async{
+Future<Worldwide>? fetchData() async{
 
   var dio = Dio();
 
@@ -12,6 +12,7 @@ Future<Worldwide> fetchData() async{
  
 if(response.statusCode == 200) {
   var res = response.data;
+  
   var values = Worldwide.fromJson(res);
   casesData = values;
   return values;

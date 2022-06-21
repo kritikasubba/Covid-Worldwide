@@ -28,7 +28,10 @@ Provider.of<UserProvider>(context , listen: false).getData();
           return ListView.builder(itemBuilder: (context, index) {
             return Column(
 children: [
-  Text(''),
+  Text(casesData?.active.toString() ?? ""),
+  Text(casesData?.affectedCountries.toString() ?? ""),
+  Text(casesData?.cases.toString() ?? "" )
+
 ],
             );
             
